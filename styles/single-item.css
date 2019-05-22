@@ -1,0 +1,16 @@
+.comments-container{
+  border-top: 1px solid black;
+  margin-top: 20px;
+}
+
+.comments-container>ul>li{
+  margin-bottom: 15px;
+  list-style: none;
+  border: 1px solid black;
+}
+
+.comments-container>ul{
+  padding: 15px 0px;
+  margin: 0px;
+  list-style: none;
+}

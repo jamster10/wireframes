@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <link rel="stylesheet" href="../../styles/results-list.css">
     <link rel="stylesheet" href="../../styles/login.css">
+    <link rel="stylesheet" href="../../styles/single-item.css">
   </head>
   <body>
     <nav class="Navbar" role="navigation">
       <div class='logo-container'>
         <h1 class='brand'>DogGo!</h1>
       </div>
-      <div class= "user-controls"><button>Register</button>|<button>Login</button></div>
+      <div class= "user-controls"><button>My Routes</button>|<button>Logout</button></div>
     </nav>
     <main>
       <div class="map-search">
@@ -90,16 +91,30 @@
           </form>
       </div>
       <div class="results-container">
-        <div>
-          <h2>Login</h2>
-          <label>Username:</label>
-          <input type="text" name="username">
-
-          <br><br>
-          <label>Password:</label>
-          <input type="password" name="password">
-          <input type="submit" value="submit">
-        </form>
+          <div class="photo-container">
+              photo
+            </div>
+            <div class="info-container">
+              <h3>Place name</h3>
+              <h4>Place description</h4>
+              <h4>place hours</h4>
+            </div>
+            <div class="comments-container">
+              <ul>
+                <li class="comment">
+                  <p>I think these things about that</p>
+                </li>
+                <li class="comment">
+                  <p>I think these things about this</p>
+                </li>
+                <li class="comment">
+                  <p>I really like that place good dog beer</p>
+                </li>
+                <li class="comment">
+                  <p>My dog had a great time there!!</p>
+                </li>
+              </ul>
+            </div>
       </div>
     </main>
   </body>
