@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="html wireframes for Doggo">
+
+    <title> DogGo wireframes</title>
+    <link rel="stylesheet" href="../../styles/Navbar.css">
+    <link rel="stylesheet" href="../../styles/map.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/results-list.css">
+  </head>
+  <body>
+    <nav class="Navbar" role="navigation">
+      <div class='logo-container'>
+        <h1 class='brand'>DogGo!</h1>
+      </div>
+      <div class= "user-controls"><button>My Routes</button>|<button>Logout</button></div>
+    </nav>
+    <main>
+      <div class="map-search">
+        <div id="map-container">
+        </div>
+        <br>
+        <form class="query-form">
+            <div class="input-item input-start">
+              <label htmlFor="origin-input">Start:</label>
+              <input class="query-input" type="text"  name="origin-input" id="origin-input" placeholder="currentLocation" value="startLocation" onChange={handleRouteInput}></input>
+            </div>
+            <br/>
+            <div class="input-item input-end">
+              <label htmlFor="destination-input">End:</label>
+              <input class="query-input" type="text" placeholder='Zion National Park' name="destination-input" id="destination-input" value="endLocation" onChange={handleRouteInput}/>
+            </div>
+            <br>
+            <fieldset>
+              <legend>Searching for dog friendly:</legend>
+                <div class="search-options">
+                  <input 
+                    type="checkbox"
+                    name="bars"
+                    id="bars"
+                    onChange={onCheckboxChange}
+                  />
+                  <label for="bars">Bars</label>
+                  
+                  <input 
+                    type="checkbox"
+                    name="parks"
+                    id="parks"
+                    onChange={onCheckboxChange}
+                  />
+                  <label for="parks">Parks</label>
+
+                  <input 
+                    type="checkbox"
+                    name="hotel"
+                    id= "hotel"
+                    onChange={onCheckboxChange}
+                  />
+                  <label for="hotel">Hotel</label>
+                  
+                  <input 
+                    type="checkbox"
+                    name="vet"
+                    id="vet"
+                    onChange={onCheckboxChange}
+                  />
+                  <label for="vet">Vet</label>
+                  
+                  <input 
+                    type="checkbox"
+                    name="groomers"
+                    id="groomers"
+                    onChange={onCheckboxChange}
+                  />
+                  <label for="groomers">Groomers</label>
+
+                  <input 
+                    type="checkbox"
+                    name="kennels"
+                    id="kennels"
+                    onChange={onCheckboxChange}
+                  />
+                  <label for="kennels">Kennels</label>
+                </div>
+            </fieldset>
+          </form>
+      </div>
+      <div class="results-container">
+        <button>My places</button>|<button>My Routes</button>
+        <br><br>
+
+        <h2>Make a search to begin!</h2>
+      </div>
+    </main>
+  </body>
+</html>
+<script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map-container'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+async defer></script>

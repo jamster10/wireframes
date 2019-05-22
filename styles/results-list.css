@@ -1,0 +1,30 @@
+.search-item{
+  display: flex;
+  padding: 15px;
+}
+
+.photo-container{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin:0px;
+  padding: 0px;
+}
+
+.info-container{
+  padding: 0px;
+  margin-left: 10px;
+}
+
+h3, h4{
+  padding: 2px;
+  margin: 0px;
+}
+
+p{
+  padding:0px;
+  margin: 0px;
+}
+.rating{
+  margin-left: 30px;
+}

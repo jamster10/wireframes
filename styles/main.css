@@ -1,0 +1,19 @@
+.map-search{
+  text-align: center;
+}
+main{
+  width: 100%;
+  display: flex;
+}
+
+.results-container{
+  border-left: 1px solid black;
+  overflow-y: auto;
+  height: 90vh;
+}
+
+@media (min-width: 700px){
+  .map-search, .results-container{
+    width: 50%;
+  }
+}
